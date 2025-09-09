@@ -15,3 +15,14 @@ int timeToMinutes(const string& timeStr) {
     int minutes = stoi(timeStr.substr(colonPos + 1));
     return hours * 60 + minutes;
 }
+
+struct Event {
+    int time;
+    string action;
+    int station;
+    int pid;
+    Event(int t, const string& a, int s, int p) : time(t), action(a), station(s), pid(p) {}
+    bool operator<(const Event& other) const {
+        return time < other.time;
+    }
+};
