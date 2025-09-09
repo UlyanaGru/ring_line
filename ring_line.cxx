@@ -26,3 +26,28 @@ struct Event {
         return time < other.time;
     }
 };
+
+int main() {
+    vector<Event> events;
+    string line;
+    //Чтение всех строк
+    while (getline(cin, line)) {
+        if (line.empty()) continue;
+        istringstream iss(line);
+        vector<string> parts;
+        string part;
+        while (iss >> part) {
+            parts.push_back(part);
+        }
+        if (parts.size() < 4) continue;
+        try {
+            int pid = stoi(parts[0]);
+            string action = parts[1];
+            int station = stoi(parts[2]);
+            string timeStr = parts[3]; 
+            int timeMinutes = timeToMinutes(timeStr);
+            events.emplace_back(timeMinutes, action, station, pid);
+        } catch (const exception& e) {
+            continue;
+        }
+    }
