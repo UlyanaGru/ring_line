@@ -4,6 +4,13 @@
 
 Захотелось узнать, сколько в среднем людей одновременно находилось в его составе в течение дня. Он вычисляет эту величину так:
 
+$$(station\_to, station\_from, time\_from, time\_to, passengers),station_{to} = (station_{from}(mod10)) + 1$$
 
+Среднее количество одновременно находившихся в составе людей вычисляется по формуле:
 
-- [x] [Python](https://github.com/UlyanaGru/ring_line/blob/master/ring_line.py)
+$$\text{среднее} = \frac{\sum_{\text{span}} (\text{text\_to} - \text{time\_from}) \cdot \text{passengers}}{\sum_{\text{span}} (\text{time\_to} - \text{time\_from})}
+$$
+
+Вам дан лог событий вида (pid, action, station_num, time), означающих, что пассажир с номером pid в момент времени time на станции station_num либо вошел в состав (action = 'in'), либо вышел из него (action = 'out').
+
+- [Python](https://github.com/UlyanaGru/ring_line/blob/master/ring_line.py)
