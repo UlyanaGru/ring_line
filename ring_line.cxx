@@ -55,3 +55,6 @@ int main() {
     int startTime = timeToMinutes("05:00");
     int endTime = timeToMinutes("23:30");
     int totalDuration = endTime - startTime;
+    //Начальные и конечные мероприятия, чтобы мы могли охватить весь день
+    events.emplace_back(startTime, "start", 1, -1);
+    events.emplace_back(endTime, "end", 10, -1);
