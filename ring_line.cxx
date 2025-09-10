@@ -51,3 +51,7 @@ int main() {
             continue;
         }
     }
+    //Определение начала и конца отсчета
+    int startTime = timeToMinutes("05:00");
+    int endTime = timeToMinutes("23:30");
+    int totalDuration = endTime - startTime;
