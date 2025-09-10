@@ -58,3 +58,5 @@ int main() {
     //Начальные и конечные мероприятия, чтобы мы могли охватить весь день
     events.emplace_back(startTime, "start", 1, -1);
     events.emplace_back(endTime, "end", 10, -1);
+    //Сортировка событий по времени
+    sort(events.begin(), events.end());
