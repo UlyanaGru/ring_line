@@ -60,3 +60,7 @@ int main() {
     events.emplace_back(endTime, "end", 10, -1);
     //Сортировка событий по времени
     sort(events.begin(), events.end());
+    //Обработка событий с использованием алгоритма развертки
+    int currentPassengers = 0;
+    int prevTime = startTime;
+    double totalPassengerMinutes = 0.0;
