@@ -24,3 +24,4 @@ $$
 Записи в логе перечислены в произвольном порядке.
 
 - [Python](https://github.com/UlyanaGru/ring_line/blob/master/ring_line.py)
+- [C++](https://github.com/UlyanaGru/ring_line/blob/master/ring_line.cxx)
