@@ -80,3 +80,9 @@ int main() {
         }
         prevTime = time;
     }
+    //Подсчет среднего
+    double average = totalPassengerMinutes / totalDuration;
+    //Формат вывода с точностью .12
+    cout << fixed << setprecision(12) << average << endl;
+    return 0;
+}
