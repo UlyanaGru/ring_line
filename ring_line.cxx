@@ -78,4 +78,5 @@ int main() {
         } else if (action == "out") {
             currentPassengers--;
         }
-        
+        prevTime = time;
+    }
