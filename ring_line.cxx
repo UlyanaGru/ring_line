@@ -72,3 +72,10 @@ int main() {
         if (timeDelta > 0) {
             totalPassengerMinutes += currentPassengers * timeDelta;
         }
+        //Обновление количества пассажиров
+        if (action == "in") {
+            currentPassengers++;
+        } else if (action == "out") {
+            currentPassengers--;
+        }
+        
