@@ -64,3 +64,11 @@ int main() {
     int currentPassengers = 0;
     int prevTime = startTime;
     double totalPassengerMinutes = 0.0;
+    for (const auto& event : events) {
+        int time = event.time;
+        const string& action = event.action;    
+        //Подсчет времени с момента предыдущего события
+        int timeDelta = time - prevTime;
+        if (timeDelta > 0) {
+            totalPassengerMinutes += currentPassengers * timeDelta;
+        }
