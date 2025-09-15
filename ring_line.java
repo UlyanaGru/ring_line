@@ -9,5 +9,18 @@ public class Main {
         int minutes = Integer.parseInt(parts[1]);
         return hours * 60 + minutes;
     }
+    //Класс для представления события (вход/выход пассажира)
+    static class Event {
+        int time;           //время в минутах с 00:00
+        String action;      //действие: "in" или "out"
+        int station;        //номер станции
+        int pid;            //идентификатор пассажира
+        Event(int time, String action, int station, int pid) {
+            this.time = time;
+            this.action = action;
+            this.station = station;
+            this.pid = pid;
+        }
+    }
     
     
