@@ -23,4 +23,12 @@ public class Main {
         }
     }
     
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        List<Event> events = new ArrayList<>();
+        //Чтение всех входных строк
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine().trim();
+            if (line.isEmpty()) continue;
+    
     
