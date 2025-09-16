@@ -30,5 +30,19 @@ public class Main {
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine().trim();
             if (line.isEmpty()) continue;
+            String[] parts = line.split("\\s+");
+            if (parts.length < 4) continue;
+            try {
+                int pid = Integer.parseInt(parts[0]);
+                String action = parts[1];
+                int station = Integer.parseInt(parts[2]);
+                String timeStr = parts[3];
+                int timeMinutes = timeToMinutes(timeStr);
+                events.add(new Event(timeMinutes, action, station, pid));
+            } catch (NumberFormatException e) {
+                continue; //Пропускаем некорректные строки
+            }
+        }
+        scanner.close();
     
     
