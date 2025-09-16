@@ -44,5 +44,9 @@ public class Main {
             }
         }
         scanner.close();
+        //Определяем временные границы дня
+        int startTime = timeToMinutes("05:00");
+        int endTime = timeToMinutes("23:30");
+        int totalDuration = endTime - startTime; //Общая продолжительность дня в минутах
     
     
