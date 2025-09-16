@@ -48,5 +48,8 @@ public class Main {
         int startTime = timeToMinutes("05:00");
         int endTime = timeToMinutes("23:30");
         int totalDuration = endTime - startTime; //Общая продолжительность дня в минутах
+        //Добавляем начальное и конечное события для отображения всего дня
+        events.add(new Event(startTime, "start", 1, -1));
+        events.add(new Event(endTime, "end", 10, -1));
     
     
