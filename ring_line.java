@@ -51,5 +51,7 @@ public class Main {
         //Добавляем начальное и конечное события для отображения всего дня
         events.add(new Event(startTime, "start", 1, -1));
         events.add(new Event(endTime, "end", 10, -1));
+        //Сортируем события по времени
+        events.sort(Comparator.comparingInt(e -> e.time));
     
     
