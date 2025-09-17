@@ -53,5 +53,9 @@ public class Main {
         events.add(new Event(endTime, "end", 10, -1));
         //Сортируем события по времени
         events.sort(Comparator.comparingInt(e -> e.time));
+        //Алгоритм "sweep line" (сканирующей прямой)
+        int currentPassengers = 0;      //Текущее количество пассажиров в поезде
+        int prevTime = startTime;       //Время предыдущего события
+        double totalPassengerMinutes = 0.0; //Сумма пассажиро-минут за день
     
     
