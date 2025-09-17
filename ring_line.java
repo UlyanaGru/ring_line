@@ -61,5 +61,11 @@ public class Main {
         for (Event event : events) {
             int currentTime = event.time;
             String action = event.action;
+            //Вычисляем время между предыдущим и текущим событиями
+            int timeDelta = currentTime - prevTime;
+            if (timeDelta > 0) {
+                //Добавляем пассажиро-минуты за этот период
+                totalPassengerMinutes += currentPassengers * timeDelta;
+            }
     
     
