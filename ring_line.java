@@ -57,5 +57,9 @@ public class Main {
         int currentPassengers = 0;      //Текущее количество пассажиров в поезде
         int prevTime = startTime;       //Время предыдущего события
         double totalPassengerMinutes = 0.0; //Сумма пассажиро-минут за день
+        //Обрабатываем все события по порядку
+        for (Event event : events) {
+            int currentTime = event.time;
+            String action = event.action;
     
     
