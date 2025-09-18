@@ -67,5 +67,11 @@ public class Main {
                 //Добавляем пассажиро-минуты за этот период
                 totalPassengerMinutes += currentPassengers * timeDelta;
             }
+            //Обновляем количество пассажиров
+            if ("in".equals(action)) {
+                currentPassengers++; //Пассажир вошел
+            } else if ("out".equals(action)) {
+                currentPassengers--; //Пассажир вышел
+            }
     
     
