@@ -73,5 +73,13 @@ public class Main {
             } else if ("out".equals(action)) {
                 currentPassengers--; //Пассажир вышел
             }
+            prevTime = currentTime; //Обновляем время предыдущего события
+        }
+        //Вычисляем среднее количество пассажиров
+        double average = totalPassengerMinutes / totalDuration;
+        //Форматируем вывод с 12 знаками после запятой
+        System.out.printf("%.12f%n", average);
+    }
+}
     
     
